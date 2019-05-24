@@ -21,11 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         addHeight: true,
     });
 
-    // var callback = function (scrollLeft, scrollTop, width, height) {
-    //     console.log(scrollLeft, scrollTop, width, height)
-    //     trigger.detach(callback)
-    // }
-    // trigger.attach(callback)
     $('input.number').focusout(function (event) {
         $(this).val(function (index, value) {
             //remove unncesary character 
