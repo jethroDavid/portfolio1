@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+</head>
+
+<body>
+    <script src="dist/bundle.js"></script>
+    <div class="container-fluid nopadding flex-column">
+        <div class="container-fluid page-section nopadding background-color-main d-flex">
+            <div class="middle-container">
+                <div class="output-container"
+                    data-scroll="toggle(.scrollAnimationComeBack, .scrollAnimationGoAnotherWay)">
+                    <label class="output-title-label mb-4">Sub Meter Output</label>
+                    <table class="output-table">
+                        <tr>
+                            <td>Net Amount</td>
+                            <td>Php 0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total Tax</td>
+                            <td>Php 0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Amount Percent</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Gross Amount</td>
+                            <td>Php 0.00</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-secondary output-button-style"
+                                    id='clearButton'><svg class="fa fa-eraser"></svg>
+                                    Clear total</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="main-control-container"
+                    data-scroll="toggle(.scrollAnimationComeBack, .scrollAnimationGoAway)">
+                    <label class="main-title-label mb-4">Sub Meter Computation</label>
+                    <div class="form-group mb-1 main-form-group-style">
+                        <label class="font-weight-light">Total kwh (kilowatt-hour)</label>
+                        <input class="form-control main-input-style number" id="totalKwh" type="text"
+                            placeholder="e.g 256" />
+                        <small class="text-muted font-weight-light">enter amout of kwh consume</small>
+                    </div>
+                    <div class="form-group mb-1 main-form-group-style">
+                        <label class="font-weight-light">Php per/kwh</label>
+                        <input class="form-control main-input-style number" id="perKwh" type="text"
+                            placeholder="e.g 12.123" />
+                        <small class="text-muted font-weight-light">enter price per kwh</small>
+                    </div>
+                    <div class="form-group mb-1 main-form-group-style">
+                        <label class="font-weight-light">Total Tax</label>
+                        <input class="form-control main-input-style number" id="totalTax" type="text"
+                            placeholder="e.g 120" />
+                        <!-- <small class="text-muted font-weight-light">enter price per kwh</small> -->
+                    </div>
+                    <div class="form-group mb-1 main-form-group-style">
+                        <label class="font-weight-light">Overall price to pay</label>
+                        <input class="form-control main-input-style number" id="overallPrice" type="text"
+                            placeholder="e.g 13,320" />
+                        <small class="text-muted font-weight-light">enter overall price consume</small>
+                    </div>
+                    <button type="button" class="btn btn-primary main-button-style" id="calculatePrice"><svg
+                            class="fa fa-calculator"></svg>
+                        Calculate Price</button>
+                    <div class="alert-message">
+                        <svg class="fas fa-exclamation-circle alert-color-bad hidden" style="font-size: 24px"></svg>
+                        <span class="hidden"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid page-section nopadding badge-container d-flex justify-content-center">
+            <div class="badge-main-container d-flex flex-column flex-wrap">
+                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) centerHorizontal">
+                    <svg class="fas fa-calculator foreground-color-main"></svg>
+                </div>
+                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)">Computation will be
+                    fast and easy, no hassle of downloading and installing application, very simple way to
+                    do submeter calculation.</div>
+            </div>
+            <div class="badge-main-container d-flex flex-column flex-wrap">
+                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut)"><svg
+                        class="fas fa-chart-bar"></svg></div>
+                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)">Share your sub meter
+                    report to your land lord.
+                </div>
+            </div>
+            <div class="badge-main-container d-flex flex-column flex-wrap">
+                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut)"><svg
+                        class="fas fa-user-circle foreground-color-secondary"></svg></div>
+                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)"> Easy and Secure
+                    Registration of Account.
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid page-section nopadding overflow-auto" style="height: auto !important">
+            <div class="scaleDownIn electricity-consumption-table-container pb-5">
+                <label class="electricity-consumption-label mb-4"
+                    data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Estimated cost
+                    table</label>
+                <table class='electricity-consumption-table'>
+                    <tr data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once">
+                        <th>Product</th>
+                        <th>Type</th>
+                        <th>Model</th>
+                        <th>Brand</th>
+                        <th>Estimated cost per hour</th>
+                    </tr>
+                    <tr data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once">
+                        <td>
+                            <div class="d-flex flex-row flex-wrap justify-content-center">
+                                <img src="C:/Users/JETHRO%20CLEIN/Desktop/Untitled-1.png" /><span>Electric Fan</span>
+                            </div>
+                        </td>
+                        <td>16" Stand Fan</td>
+                        <td>PJ-5160M</td>
+                        <td>Sharp</td>
+                        <td>Php 0.57 <label class="small">(Estimated cost per hour)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>Rice Cooker</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>1</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>2</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>3</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>4</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>5</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>6</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>7</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>8</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>9</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>10</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>11</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>12</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>13</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>14</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>15</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>16</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>17</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                    <tr
+                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
+                        <td>18</td>
+                        <td>1.8L Smart Touch</td>
+                        <td>HD3077</td>
+                        <td>Philips</td>
+                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
+                    </tr>
+                </table>
+                <span id="moreTable">
+                    <svg class="fas fa-chevron-down"></svg>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
