@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         addHeight: true,
     });
 
+    // $('.background-color-main').css({ backgroundImage: 'url(./image/d2.jpg)' })
+
     $('input.number').focusout(function (event) {
         $(this).val(function (index, value) {
             //remove unncesary character 

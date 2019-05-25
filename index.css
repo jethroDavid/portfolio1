@@ -91,16 +91,11 @@
 }
 .background-color-main{
     background-color:#fb6f17;
-    background-image: url(/image/d2.jpg);
+    background-image: url(./image/d2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    perspective: 200px;
-}
-.parallax-window{
-    min-height: 400px;
-    background: transparent;
 }
 .foreground-color-main{
     color:#fb6f17;
@@ -189,13 +184,20 @@
 	transform: scale(0.7,0.7);
 	opacity: 0.0;
 }
-.main-title-label,.output-title-label,.electricity-consumption-label{
+.main-title-label,.output-title-label,.electricity-consumption-label,.tips-tricks-label{
     font-weight: 100;
     font-size: 24px;
     width: 80%;
 }
+.electricity-consumption-label,.tips-tricks-label{
+    width: 100%;
+    text-align: center;
+}
+.tips-tricks-label{
+    color: #fff;
+}
 .output-title-label{
-    color: white;
+    color: #fff;
 }
 .main-input-style{
     height: 40px;
@@ -248,7 +250,7 @@
     /* background: #00000040; */
 }
 .output-table > tbody > tr{
-    height: 80px;
+    height: 77px;
     border-bottom: 1px solid #ffffff50;
 }
 .output-table > tbody > tr > td{
@@ -318,4 +320,12 @@
 	100% {
 		transform: translate(0,0) scale(1.0,1.0);
 	}
+}
+.tips-and-tricks{
+    background-color:#fb6f17;
+    background-image: url(./image/d4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
