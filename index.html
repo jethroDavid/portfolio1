@@ -1,303 +1,407 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="index.css"> -->
-
+    <title>Jethro Clein David | Senior Ionic Angular Developer</title>
+    <meta name="description"
+        content="Recruiter-ready portfolio for Jethro Clein David, an Ionic Angular contractor with experience across Angular, Ionic, Magento 2, Laravel, deployments, security remediation, and AI-assisted developer tools.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <script src="dist/bundle.js"></script>
-    <div class="container-fluid nopadding flex-column">
-        <div class="container-fluid page-section nopadding background-color-main d-flex">
-            <div class="middle-container">
-                <div class="output-container"
-                    data-scroll="toggle(.scrollAnimationComeBack, .scrollAnimationGoAnotherWay)">
-                    <label class="output-title-label mb-4">Sub Meter Output</label>
-                    <table class="output-table">
-                        <tr>
-                            <td>Net Amount</td>
-                            <td>Php 0.00</td>
-                        </tr>
-                        <tr>
-                            <td>Total Tax</td>
-                            <td>Php 0.00</td>
-                        </tr>
-                        <tr>
-                            <td>Amount Percent</td>
-                            <td>0%</td>
-                        </tr>
-                        <tr>
-                            <td>Gross Amount</td>
-                            <td>Php 0.00</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-secondary output-button-style"
-                                    id='clearButton'><svg class="fa fa-eraser"></svg>
-                                    Clear total</button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="main-control-container"
-                    data-scroll="toggle(.scrollAnimationComeBack, .scrollAnimationGoAway)">
-                    <label class="main-title-label mb-4">Sub Meter Computation</label>
-                    <div class="form-group mb-1 main-form-group-style">
-                        <label class="font-weight-light">Total kwh (kilowatt-hour)</label>
-                        <input class="form-control main-input-style number" id="totalKwh" type="text"
-                            placeholder="e.g 256" />
-                        <small class="text-muted font-weight-light">enter amout of kwh consume</small>
-                    </div>
-                    <div class="form-group mb-1 main-form-group-style">
-                        <label class="font-weight-light">Php per/kwh</label>
-                        <input class="form-control main-input-style number" id="perKwh" type="text"
-                            placeholder="e.g 12.123" />
-                        <small class="text-muted font-weight-light">enter price per kwh</small>
-                    </div>
-                    <div class="form-group mb-1 main-form-group-style">
-                        <label class="font-weight-light">Total Tax</label>
-                        <input class="form-control main-input-style number" id="totalTax" type="text"
-                            placeholder="e.g 120" />
-                        <!-- <small class="text-muted font-weight-light">enter price per kwh</small> -->
-                    </div>
-                    <div class="form-group mb-1 main-form-group-style">
-                        <label class="font-weight-light">Overall price to pay</label>
-                        <input class="form-control main-input-style number" id="overallPrice" type="text"
-                            placeholder="e.g 13,320" />
-                        <small class="text-muted font-weight-light">enter overall price consume</small>
-                    </div>
-                    <button type="button" class="btn btn-primary main-button-style" id="calculatePrice"><svg
-                            class="fa fa-calculator"></svg>
-                        Calculate Price</button>
-                    <div class="alert-message">
-                        <svg class="fas fa-exclamation-circle alert-color-bad hidden" style="font-size: 24px"></svg>
-                        <span class="hidden"></span>
-                    </div>
+    <div class="site-shell">
+        <header class="chrome">
+            <div class="chrome__cluster">
+                <div class="chrome__meta">
+                    <span class="chrome__label">resume</span>
+                    <span class="chrome__status">6+ years • 2+ years contractor • Ionic • Angular • Magento 2 • Laravel</span>
                 </div>
             </div>
+            <nav class="chrome__nav" aria-label="Primary">
+                <a href="#experience">Experience</a>
+                <a href="#work">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#workflow">AI Workflow</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-        </div>
+        <main class="workspace">
+            <aside class="prompt-panel reveal" aria-label="Profile summary">
+                <div class="panel-head">
+                    <p class="eyebrow">Profile Snapshot</p>
+                    <h2>Jethro Clein David</h2>
+                    <p class="panel-copy">Ionic Angular contractor building enterprise, commerce, mobile, and AI-assisted systems.</p>
+                </div>
 
-        <div class="container-fluid page-section nopadding badge-container d-flex justify-content-center">
-            <div class="badge-main-container d-flex flex-column flex-wrap">
-                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) centerHorizontal">
-                    <svg class="fas fa-calculator foreground-color-main"></svg>
+                <div class="profile-stats" aria-label="Career facts">
+                    <div>
+                        <strong>6+</strong>
+                        <span>years building web, mobile, and commerce apps</span>
+                    </div>
+                    <div>
+                        <strong>2+</strong>
+                        <span>years contractor work with low supervision</span>
+                    </div>
+                    <div>
+                        <strong>2024</strong>
+                        <span>TabLogs Ionic Angular contractor to present</span>
+                    </div>
                 </div>
-                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)">Computation will be
-                    fast and easy, no hassle of downloading and installing application, very simple way to
-                    do submeter calculation.</div>
-            </div>
-            <div class="badge-main-container d-flex flex-column flex-wrap">
-                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut)"><svg
-                        class="fas fa-chart-bar"></svg></div>
-                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)">Share your sub meter
-                    report to your land lord.
+
+                <div class="profile-block">
+                    <p class="profile-block__title">Core Skills</p>
+                    <p>Angular, Ionic, Capacitor, TypeScript, SQLite offline flows, Storybook, Angular Material wrappers, translations, Magento 2, Laravel, REST APIs.</p>
                 </div>
-            </div>
-            <div class="badge-main-container d-flex flex-column flex-wrap">
-                <div class="badge-icon" data-scroll="toggle(.scrollSlideIn, .scrollSlideOut)"><svg
-                        class="fas fa-user-circle foreground-color-secondary"></svg></div>
-                <div class="badge-text" data-scroll="toggle(.scrollFadeIn, .scrollSlideReverseOut)"> Easy and Secure
-                    Registration of Account.
+
+                <div class="profile-block">
+                    <p class="profile-block__title">Proof</p>
+                    <a href="https://freshpineappleagent.web.app/" target="_blank" rel="noreferrer">Live Pineapple Agent</a>
+                    <a href="https://github.com/jethroDavid" target="_blank" rel="noreferrer">GitHub portfolio</a>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid page-section nopadding overflow-auto" style="height: auto !important">
-            <div class="scaleDownIn electricity-consumption-table-container pb-5">
-                <label class="electricity-consumption-label mb-4"
-                    data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Estimated cost
-                    table</label>
-                <table class='electricity-consumption-table'>
-                    <tr data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once">
-                        <th>Product</th>
-                        <th>Type</th>
-                        <th>Model</th>
-                        <th>Brand</th>
-                        <th>Estimated cost per hour</th>
-                    </tr>
-                    <tr data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once">
-                        <td>
-                            <div class="d-flex flex-row flex-wrap justify-content-center">
-                                <img src="C:/Users/JETHRO%20CLEIN/Desktop/Untitled-1.png" /><span>Electric Fan</span>
+
+                <div class="profile-block">
+                    <p class="profile-block__title">Contact</p>
+                    <a href="mailto:jethrodavid6@gmail.com">jethrodavid6@gmail.com</a>
+                    <a href="tel:+639084860092">+63 908 486 0092</a>
+                </div>
+            </aside>
+
+            <div class="resume-canvas" id="top">
+                <div class="window-tabs" aria-label="Window tabs">
+                    <a class="window-tabs__item" href="#resume" data-target="resume">resume.md</a>
+                    <a class="window-tabs__item" href="#experience" data-target="experience">experience.log</a>
+                    <a class="window-tabs__item" href="#work" data-target="work">projects.log</a>
+                    <a class="window-tabs__item" href="#skills" data-target="skills">skills.json</a>
+                    <a class="window-tabs__item" href="#workflow" data-target="workflow">workflow.cfg</a>
+                </div>
+
+                <section class="hero section reveal" id="resume">
+                    <div class="hero__copy">
+                        <p class="eyebrow">Ionic Angular • Commerce • Security • AI Systems</p>
+                        <h1>Ionic Angular developer with 6+ years in production work.</h1>
+                        <p class="hero__lede">
+                            I work at TabLogs as the primary mobile developer for Ionic Angular work and previously served
+                            as a Senior Analyst at Accenture. I have shipped enterprise Angular/Ionic work, Magento 2
+                            modules, Laravel features, API integrations, offline functionality, and security remediation.
+                        </p>
+                        <div class="hero__facts" aria-label="Resume highlights">
+                            <span>6+ years experience</span>
+                            <span>2+ years contractor</span>
+                            <span>Adobe Commerce certified</span>
+                            <span>Built my own AI agent runtime</span>
+                        </div>
+                        <div class="hero__actions">
+                            <a class="button button--primary" href="#experience">View Experience</a>
+                            <a class="button button--ghost" href="https://freshpineappleagent.web.app/" target="_blank" rel="noreferrer">Live Agent</a>
+                            <a class="button button--ghost" href="#contact">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="hero__terminal" aria-label="Resume status panel">
+                        <div class="hero__terminal-head">
+                            <span>session</span>
+                            <span>/portfolio/resume</span>
+                        </div>
+                        <p class="terminal__line"><span>role</span><strong>Ionic Angular Developer</strong></p>
+                        <p class="terminal__line"><span>current</span><strong>TabLogs • 2024 to present</strong></p>
+                        <p class="terminal__line"><span>cert</span><strong>Adobe Commerce Developer</strong></p>
+                        <p class="terminal__line"><span>agent</span><strong>Pineapple Agent live</strong></p>
+                    </div>
+                </section>
+
+                <section class="signal-strip section reveal" aria-label="Professional summary">
+                    <div class="signal">
+                        <p class="signal__label">Frontend Delivery</p>
+                        <p class="signal__value">Angular/Ionic apps, responsive UI, APIs, debugging, production support</p>
+                    </div>
+                    <div class="signal">
+                        <p class="signal__label">Commerce + Security</p>
+                        <p class="signal__value">Magento 2, Laravel, payment flows, vulnerability remediation</p>
+                    </div>
+                    <div class="signal">
+                        <p class="signal__label">AI Proof</p>
+                        <p class="signal__value">Built Pineapple Agent: backend runtime, adapters, audio bridge</p>
+                    </div>
+                </section>
+
+                <section class="section reveal" id="experience">
+                    <div class="section-heading">
+                        <p class="eyebrow">Professional Experience</p>
+                        <h2>Recent roles and the work that matters.</h2>
+                    </div>
+
+                    <div class="experience-grid">
+                        <article class="experience-item experience-item--current">
+                            <div class="experience-item__time">2024 - Present</div>
+                            <div class="experience-item__body">
+                                <p class="experience-item__company">TabLogs</p>
+                                <h3>Primary Mobile Developer / Ionic Angular Contractor</h3>
+                                <p>
+                                    Sole mobile-focused developer for TabLogs, handling production fixes and leading the
+                                    v2 offline functionality work. I usually own the mobile implementation direction.
+                                </p>
+                                <div class="impact-list">
+                                    <span>Primary mobile developer since 2024</span>
+                                    <span>Introduce several offline functionality improvements</span>
+                                </div>
                             </div>
-                        </td>
-                        <td>16" Stand Fan</td>
-                        <td>PJ-5160M</td>
-                        <td>Sharp</td>
-                        <td>Php 0.57 <label class="small">(Estimated cost per hour)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>Rice Cooker</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>1</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>2</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>3</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>4</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>5</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>6</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>7</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>8</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>9</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>10</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>11</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>12</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>13</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>14</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>15</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>16</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>17</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                    <tr
-                        data-scroll="toggle(.scrollSlideIn, .scrollSlideOut) once scrollIn(document.querySelector('#asdasdasd'))">
-                        <td>18</td>
-                        <td>1.8L Smart Touch</td>
-                        <td>HD3077</td>
-                        <td>Philips</td>
-                        <td>Php 3.55 <label class="small">(Estimated cost per use)</label></td>
-                    </tr>
-                </table>
-                <span id="moreTable">
-                    <svg class="fas fa-chevron-down"></svg>
-                </span>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-item__time">Sep 2021 - 2024</div>
+                            <div class="experience-item__body">
+                                <p class="experience-item__company">Accenture</p>
+                                <h3>Advance App Engineering Sr Analyst</h3>
+                                <p>Built and maintained Ionic Angular features for an internal enterprise app, with ownership across components, pages, directives, guards, services, APIs, and security vulnerability remediation.</p>
+                                <div class="impact-list">
+                                    <span>Security vulnerability remediation</span>
+                                    <span>SSL pinning fixes</span>
+                                    <span>Authentication gap remediation</span>
+                                    <span>Root and jailbreak detection hardening</span>
+                                    <span>Dependency vulnerability cleanup</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-item__time">Magento Track</div>
+                            <div class="experience-item__body">
+                                <p class="experience-item__company">Accenture client delivery</p>
+                                <h3>Magento 2 Developer for a major European beverage brand.</h3>
+                                <p>Built frontend and backend Magento modules, prepared releases, coordinated branches, handled manual merges, and fixed mobile-first storefront issues.</p>
+                                <div class="impact-list">
+                                    <span>Frontend and backend Magento 2 module work</span>
+                                    <span>Production release coordination</span>
+                                    <span>Mobile-first website fixes</span>
+                                    <span>MVC-based platform development</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-item__time">Jul 2019 - Sep 2021</div>
+                            <div class="experience-item__body">
+                                <p class="experience-item__company">IT Developer</p>
+                                <h3>Full Stack Developer for Magento and Laravel applications.</h3>
+                                <p>Delivered Magento and Laravel features across analysis, coding, debugging, deployment, plugin work, payment integrations, and backend APIs.</p>
+                                <div class="impact-list">
+                                    <span>Mobile number login and registration</span>
+                                    <span>Internet provider plan inquiry pages</span>
+                                    <span>In-store pickup shipping method</span>
+                                    <span>Home Credit, Akulaku, and top-up API integration</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-item__time">Aug 2018 - Nov 2018</div>
+                            <div class="experience-item__body">
+                                <p class="experience-item__company">PRIME Philippines</p>
+                                <h3>Front End Developer Intern.</h3>
+                                <p>
+                                    Completed 500 hours of frontend training, building component functionality with
+                                    React, Ant Design UI components, and REST API communication.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="credential-band">
+                        <div>
+                            <p class="credential-band__label">Certification</p>
+                            <strong>Adobe Certified Professional - Adobe Commerce Developer</strong>
+                            <span>November 2021 to November 2023</span>
+                        </div>
+                        <div>
+                            <p class="credential-band__label">Education</p>
+                            <strong>Bachelor's in Information Technology</strong>
+                            <span>Bulacan State University, June 2015 to June 2019</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section reveal" id="work">
+                    <div class="section-heading">
+                        <p class="eyebrow">Selected Work</p>
+                        <h2>Proof of work across secure apps, trading flows, and AI systems.</h2>
+                    </div>
+
+                    <div class="project-list">
+                        <article class="project">
+                            <div class="project__meta">
+                                <span>Case 01</span>
+                                <span>Secure Mobile App</span>
+                            </div>
+                            <div class="project__body">
+                                <h3>passsword-manager: encrypted password vault for Ionic and Angular.</h3>
+                                <p>
+                                    A cloud-backed password vault using Firebase Auth and Firestore, with passphrase-based
+                                    client-side encryption. The app derives a KEK with PBKDF2, protects a generated DEK
+                                    with AES-GCM, and encrypts vault item passwords before storage.
+                                </p>
+                            </div>
+                            <div class="project__stack">
+                                <span>Angular 20</span>
+                                <span>Ionic 8</span>
+                                <span>Capacitor 7</span>
+                                <span>Firebase</span>
+                                <span>Web Crypto API</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://github.com/jethroDavid/passsword-manager" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <div class="project__meta">
+                                <span>Case 02</span>
+                                <span>Agent Runtime</span>
+                            </div>
+                            <div class="project__body">
+                                <h3>pineapple-agent: my own multi-agent backend runtime.</h3>
+                                <p>
+                                    A pnpm/turborepo system with a Fastify backend, OpenAI Agents runtime, PostgreSQL
+                                    persistence through Drizzle, trigger execution, decision resolution, adapter plugins,
+                                    and an Expo mobile audio client for assistant request and playback flows.
+                                </p>
+                            </div>
+                            <div class="project__stack">
+                                <span>Node.js 22+</span>
+                                <span>TypeScript</span>
+                                <span>Fastify</span>
+                                <span>OpenAI Agents</span>
+                                <span>PostgreSQL</span>
+                                <span>Expo</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://freshpineappleagent.web.app/" target="_blank" rel="noreferrer">Live site</a>
+                                <a href="https://github.com/jethroDavid/pineapple-agent" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <div class="project__meta">
+                                <span>Case 03</span>
+                                <span>Trading Mobile App</span>
+                            </div>
+                            <div class="project__body">
+                                <h3>zerosumx: mobile trading app with Alpaca integrations.</h3>
+                                <p>
+                                    An Ionic, Angular, and Capacitor trading app for portfolio tracking, watchlists,
+                                    market data, and order execution. It encrypts Alpaca credentials locally, auto-locks
+                                    after background inactivity, and supports market/limit order flows with confirmation.
+                                </p>
+                            </div>
+                            <div class="project__stack">
+                                <span>Angular 20</span>
+                                <span>Ionic 8</span>
+                                <span>Capacitor 7</span>
+                                <span>Alpaca APIs</span>
+                                <span>WebSockets</span>
+                                <span>AES encryption</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://github.com/jethroDavid/zerosumx" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="workflow section reveal" id="workflow">
+                    <div class="section-heading">
+                        <p class="eyebrow">Agent Work</p>
+                        <h2>I built my own agent runtime, not just a wrapper around AI tools.</h2>
+                    </div>
+
+                    <div class="workflow-grid">
+                        <div class="workflow-commands">
+                            <div class="command-row">
+                                <span class="command-row__prompt">$ pineapple-agent</span>
+                                <p>Fastify backend, OpenAI Agents runtime, PostgreSQL persistence, adapter plugins, and thread-based execution.</p>
+                            </div>
+                            <div class="command-row">
+                                <span class="command-row__prompt">$ mobile-audio-bridge</span>
+                                <p>Expo client that submits assistant requests, polls status, streams generated audio, and reports playback completion.</p>
+                            </div>
+                            <div class="command-row">
+                                <span class="command-row__prompt">$ live-link</span>
+                                <p><a href="https://freshpineappleagent.web.app/" target="_blank" rel="noreferrer">freshpineappleagent.web.app</a></p>
+                            </div>
+                        </div>
+
+                        <div class="workflow-notes">
+                            <p>
+                                This project shows backend design, tool orchestration, persistence, mobile integration,
+                                and the judgment to turn AI workflow ideas into a working system.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section reveal" id="skills">
+                    <div class="section-heading">
+                        <p class="eyebrow">Skills Snapshot</p>
+                        <h2>A practical stack shaped by enterprise apps, commerce platforms, and personal systems work.</h2>
+                    </div>
+
+                    <div class="skill-grid">
+                        <div>
+                            <p class="skill-grid__title">Angular + Ionic</p>
+                            <p>Angular, Ionic, Capacitor, TypeScript, components, pages, directives, guards, services, routing, Android builds</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">Mobile Ownership</p>
+                            <p>Primary mobile developer, SQLite offline data, endpoint sync, offline CRUD, production fixes, cross-team coordination</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">UI + Migration Tools</p>
+                            <p>Storybook, Angular Material wrappers, shared UI migration, translation migration, Claude CLI prompt/reviewer workflow</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">Commerce + Backend</p>
+                            <p>Magento 2, Laravel, PHP, MySQL, MVC, REST APIs, custom modules, payment integrations, third-party plugins</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">Security + Deployment</p>
+                            <p>Security vulnerability remediation, SSL pinning, auth remediation, root/jailbreak checks, dependency cleanup</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">Frontend Foundations</p>
+                            <p>JavaScript, HTML5, CSS3, Bootstrap, jQuery, Ajax, JSON, XML, DOM, UI implementation, website responsiveness</p>
+                        </div>
+                        <div>
+                            <p class="skill-grid__title">Working Style</p>
+                            <p>Remote delivery, debugging, documentation, production support, release preparation, cross-national collaboration</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="footer section reveal" id="contact">
+                    <div>
+                        <p class="eyebrow">Contact</p>
+                        <h2>Based in the Philippines</h2>
+                    </div>
+                    <div class="footer__links">
+                        <a href="tel:+639084860092">+63 908 486 0092</a>
+                        <a href="mailto:jethrodavid6@gmail.com">jethrodavid6@gmail.com</a>
+                        <a href="https://github.com/jethroDavid" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/jethro-clein-david/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                    <p class="footer__note">
+                        Current work: TabLogs since 2024. Background includes Accenture, Magento 2, Laravel, Ionic Angular, deployment support, security remediation, and remote delivery.
+                    </p>
+                </footer>
             </div>
-        </div>
-
+        </main>
     </div>
-</body>
 
+    <script src="main.js"></script>
+</body>
 </html>
