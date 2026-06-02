@@ -847,6 +847,10 @@ button {
     .terminal__line {
         flex-direction: column;
     }
+    
+    .window-tabs {
+        display: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
