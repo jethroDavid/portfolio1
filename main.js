@@ -1,106 +1,32 @@
-const revealElements = [...document.querySelectorAll(".reveal")];
-const sectionTabs = [...document.querySelectorAll(".window-tabs__item[data-target]")];
-const rewindButton = document.querySelector("#rewindButton");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const yearEl = document.getElementById("year");
 
-let revealObserver;
-let sectionElements = [];
-let manualTabSelection = false;
+if (yearEl) {
+    yearEl.textContent = String(new Date().getFullYear());
+}
 
-const setActiveTab = (targetId) => {
-    sectionTabs.forEach((tab) => {
-        const isActive = tab.dataset.target === targetId;
-        tab.classList.toggle("window-tabs__item--active", isActive);
+const navLinks = Array.from(document.querySelectorAll(".topnav a[href^='#']"));
 
-        if (isActive) {
-            tab.setAttribute("aria-current", "page");
-        } else {
-            tab.removeAttribute("aria-current");
-        }
-    });
-};
+if (navLinks.length > 0 && "IntersectionObserver" in window) {
+    const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter((el) => el !== null);
 
-const getTargetFromHash = () => {
-    const targetId = window.location.hash.replace("#", "");
-    return sectionTabs.some((tab) => tab.dataset.target === targetId) ? targetId : "resume";
-};
-
-const updateActiveTabFromScroll = () => {
-    if (sectionElements.length === 0) {
-        setActiveTab(getTargetFromHash());
-        return;
-    }
-
-    const activationLine = window.scrollY + Math.min(220, window.innerHeight * 0.28);
-    const activeSection = sectionElements.reduce((current, section) => {
-        return section.offsetTop <= activationLine ? section : current;
-    }, sectionElements[0]);
-
-    setActiveTab(activeSection.id);
-};
-
-const setupRevealObserver = () => {
-    if (revealObserver) {
-        revealObserver.disconnect();
-    }
-
-    if (reduceMotion.matches) {
-        revealElements.forEach((element) => element.classList.add("is-visible"));
-        return;
-    }
-
-    revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) {
+                    continue;
+                }
+                const id = "#" + entry.target.id;
+                for (const link of navLinks) {
+                    link.classList.toggle("active", link.getAttribute("href") === id);
+                }
             }
-        });
-    }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -6% 0px"
-    });
+        },
+        { rootMargin: "-30% 0px -55% 0px" }
+    );
 
-    revealElements.forEach((element) => revealObserver.observe(element));
-};
-
-const setupTabObserver = () => {
-    sectionElements = sectionTabs
-        .map((tab) => document.getElementById(tab.dataset.target))
-        .filter(Boolean)
-        .sort((a, b) => a.offsetTop - b.offsetTop);
-    updateActiveTabFromScroll();
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-    setupRevealObserver();
-    setupTabObserver();
-    setActiveTab(getTargetFromHash());
-
-    sectionTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            manualTabSelection = true;
-            setActiveTab(tab.dataset.target);
-        });
-    });
-
-    rewindButton?.addEventListener("click", () => {
-        manualTabSelection = false;
-        window.scrollTo({
-            top: 0,
-            behavior: reduceMotion.matches ? "auto" : "smooth"
-        });
-        setActiveTab("resume");
-    });
-
-    window.addEventListener("hashchange", () => {
-        setActiveTab(getTargetFromHash());
-    });
-    window.addEventListener("scroll", () => {
-        if (!manualTabSelection) {
-            updateActiveTabFromScroll();
-        }
-    }, { passive: true });
-    window.addEventListener("resize", updateActiveTabFromScroll);
-
-    reduceMotion.addEventListener("change", setupRevealObserver);
-});
+    for (const section of sections) {
+        observer.observe(section);
+    }
+}
